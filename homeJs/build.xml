@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<project name="Flash2createjs compress project" basedir="." default="createjsCompile">
+    <taskdef name="CompressionPNG" classname="org.flash2x.CompressionPNG" classpath="${basedir}/tools/flash2x.jar"/>
+    <taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask"
+             classpath="${basedir}/tools/compiler.jar"/>
+    <target name="createjsCompile">
+        <delete dir="${basedir}/released"/>
+        <copy toDir="${basedir}/released/">
+            <fileset dir="${basedir}">
+                <include name="libs/**/*.js" />
+                <include name="index.html" />
+                <include name="resource/**/*" />
+            </fileset>
+        </copy>
+        <!-- 先替换掉空拍及换行-->
+        <replaceregexp encoding="utf-8" flags="g"  byline="false">
+            <regexp pattern='[\s\r\n\t]+'/>
+            <substitution expression="" />
+            <fileSet dir="${basedir}/released">
+                <include name="resource/*/*.res.json"/>
+            </fileSet>
+        </replaceregexp>
+        <!-- 再来将合并后多于的js文件引用去掉-->
+        <replaceregexp encoding="utf-8" flags="g"  byline="true">
+            <regexp pattern=',?\{"src":"src\/.*?","type":"javascript"\}'/>
+            <substitution expression="" />
+            <fileSet dir="${basedir}/released">
+                <include name="resource/*/*.res.json"/>
+            </fileSet>
+        </replaceregexp>
+        <replaceregexp encoding="utf-8" flags="g"  byline="true">
+            <regexp pattern='\[,'/>
+            <substitution expression="[" />
+            <fileSet dir="${basedir}/released">
+                <include name="resource/*/*.res.json"/>
+            </fileSet>
+        </replaceregexp>
+        <replaceregexp encoding="utf-8" flags="g"  byline="true">
+            <regexp pattern=',\]'/>
+            <substitution expression="]" />
+            <fileSet dir="${basedir}/released">
+                <include name="resource/*/*.res.json"/>
+            </fileSet>
+        </replaceregexp>
+        <CompressionPNG binPath="${basedir}/tools/pngquant" params="--ext=.png --force">
+            <fileSet dir="${basedir}/released">
+                <include name="resource/**/*.png"/>
+            </fileSet>
+        </CompressionPNG>
+        <jscomp compilationLevel="simple" warning="quiet"
+                debug="false" output="${basedir}/released/src/Main.js">
+            <sources dir="${basedir}/src">
+                <file name="Main.js"/>
+            </sources>
+        </jscomp>
+    	<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/home/Home.js">
+			<sources dir="${basedir}">
+				<!--need_package_home-->
+				<file name="src/home/homeAuto.js"/>
+				<file name="src/home/Home.js"/>
+				<file name="src/home/ItemButton.js"/>
+				<file name="src/home/Content.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dstage/Dstage.js">
+			<sources dir="${basedir}">
+				<!--need_package_dstage-->
+				<file name="src/dstage/dstageAuto.js"/>
+				<file name="src/dstage/Dstage.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/loading/Loading.js">
+			<sources dir="${basedir}">
+				<!--need_package_loading-->
+				<file name="src/loading/loadingAuto.js"/>
+				<file name="src/loading/Loading.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dsprite/Dsprite.js">
+			<sources dir="${basedir}">
+				<!--need_package_dsprite-->
+				<file name="src/dsprite/dspriteAuto.js"/>
+				<file name="src/dsprite/Dsprite.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/durlloader/Durlloader.js">
+			<sources dir="${basedir}">
+				<!--need_package_durlloader-->
+				<file name="src/durlloader/durlloaderAuto.js"/>
+				<file name="src/durlloader/Durlloader.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dbitmap/Dbitmap.js">
+			<sources dir="${basedir}">
+				<!--need_package_dbitmap-->
+				<file name="src/dbitmap/dbitmapAuto.js"/>
+				<file name="src/dbitmap/Dbitmap.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/ddisplayobject/Ddisplayobject.js">
+			<sources dir="${basedir}">
+				<!--need_package_ddisplayobject-->
+				<file name="src/ddisplayobject/ddisplayobjectAuto.js"/>
+				<file name="src/ddisplayobject/Ddisplayobject.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/devent/Devent.js">
+			<sources dir="${basedir}">
+				<!--need_package_devent-->
+				<file name="src/devent/deventAuto.js"/>
+				<file name="src/devent/Devent.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/deventdispatcher/Deventdispatcher.js">
+			<sources dir="${basedir}">
+				<!--need_package_deventdispatcher-->
+				<file name="src/deventdispatcher/deventdispatcherAuto.js"/>
+				<file name="src/deventdispatcher/Deventdispatcher.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dfacephoto/Dfacephoto.js">
+			<sources dir="${basedir}">
+				<!--need_package_dfacephoto-->
+				<file name="src/dfacephoto/dfacephotoAuto.js"/>
+				<file name="src/dfacephoto/Dfacephoto.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dfilter/Dfilter.js">
+			<sources dir="${basedir}">
+				<!--need_package_dfilter-->
+				<file name="src/dfilter/dfilterAuto.js"/>
+				<file name="src/dfilter/Dfilter.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dfloatdisplay/Dfloatdisplay.js">
+			<sources dir="${basedir}">
+				<!--need_package_dfloatdisplay-->
+				<file name="src/dfloatdisplay/dfloatdisplayAuto.js"/>
+				<file name="src/dfloatdisplay/Dfloatdisplay.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dglobaldispatcher/Dglobaldispatcher.js">
+			<sources dir="${basedir}">
+				<!--need_package_dglobaldispatcher-->
+				<file name="src/dglobaldispatcher/dglobaldispatcherAuto.js"/>
+				<file name="src/dglobaldispatcher/Dglobaldispatcher.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dInputText/DInputText.js">
+			<sources dir="${basedir}">
+				<!--need_package_dInputText-->
+				<file name="src/dInputText/dInputTextAuto.js"/>
+				<file name="src/dInputText/DInputText.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dmouseevent/Dmouseevent.js">
+			<sources dir="${basedir}">
+				<!--need_package_dmouseevent-->
+				<file name="src/dmouseevent/dmouseeventAuto.js"/>
+				<file name="src/dmouseevent/Dmouseevent.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dmovieclip/Dmovieclip.js">
+			<sources dir="${basedir}">
+				<!--need_package_dmovieclip-->
+				<file name="src/dmovieclip/dmovieclipAuto.js"/>
+				<file name="src/dmovieclip/Dmovieclip.js"/>
+				<file name="src/dmovieclip/Content.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dresmanager/Dresmanager.js">
+			<sources dir="${basedir}">
+				<!--need_package_dresmanager-->
+				<file name="src/dresmanager/dresmanagerAuto.js"/>
+				<file name="src/dresmanager/Dresmanager.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/logo/Logo.js">
+			<sources dir="${basedir}">
+				<!--need_package_logo-->
+				<file name="src/logo/logoAuto.js"/>
+				<file name="src/logo/Logo.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dscrollpage/Dscrollpage.js">
+			<sources dir="${basedir}">
+				<!--need_package_dscrollpage-->
+				<file name="src/dscrollpage/dscrollpageAuto.js"/>
+				<file name="src/dscrollpage/Dscrollpage.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dsound/Dsound.js">
+			<sources dir="${basedir}">
+				<!--need_package_dsound-->
+				<file name="src/dsound/dsoundAuto.js"/>
+				<file name="src/dsound/Dsound.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dshape/Dshape.js">
+			<sources dir="${basedir}">
+				<!--need_package_dshape-->
+				<file name="src/dshape/dshapeAuto.js"/>
+				<file name="src/dshape/Dshape.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dTextField/DTextField.js">
+			<sources dir="${basedir}">
+				<!--need_package_dTextField-->
+				<file name="src/dTextField/dTextFieldAuto.js"/>
+				<file name="src/dTextField/DTextField.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dtween/Dtween.js">
+			<sources dir="${basedir}">
+				<!--need_package_dtween-->
+				<file name="src/dtween/dtweenAuto.js"/>
+				<file name="src/dtween/Dtween.js"/>
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${basedir}/released/src/dvideoplayer/Dvideoplayer.js">
+			<sources dir="${basedir}">
+				<!--need_package_dvideoplayer-->
+				<file name="src/dvideoplayer/dvideoplayerAuto.js"/>
+				<file name="src/dvideoplayer/Dvideoplayer.js"/>
+			</sources>
+		</jscomp>
+	</target>
+</project>
