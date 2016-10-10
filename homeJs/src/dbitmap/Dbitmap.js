@@ -50,7 +50,7 @@ dbitmap.Dbitmap=function(){
             hxmSprite.addChild(hxmBitmap);
             s.addChild(hxmSprite);
         }
-        img.src = '../homeJs/resource/Flash2xLogo.jpg';
+        img.src = 'resource/Flash2xLogo.jpg';
         s.output_txt.text = '原图宽高100%画图;'
     }
     function creatBitmapWhitRectHandler(e){
@@ -67,7 +67,7 @@ dbitmap.Dbitmap=function(){
             hxmSprite.addChild(hxmBitmap);
             s.addChild(hxmSprite);
         }
-        img.src = '../homeJs/resource/Flash2xLogo.jpg';
+        img.src = 'resource/Flash2xLogo.jpg';
         s.output_txt.text = '指定矩形区域画图;'
     }
 };

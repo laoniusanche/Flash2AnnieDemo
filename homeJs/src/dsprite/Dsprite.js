@@ -25,7 +25,7 @@ dsprite.Dsprite=function(){
             logoSprite.mouseEnable=false;
             logoSprite.addChild(logoBitmap);
         }
-        img.src = '../homeJs/resource/Flash2xLogo.jpg';
+        img.src = 'resource/Flash2xLogo.jpg';
         s.addChild_btn.addEventListener(annie.MouseEvent.CLICK, addChildHandler);
         s.addChidAt_btn.addEventListener(annie.MouseEvent.CLICK, addChildAtHandler);
         s.removeChild_btn.addEventListener(annie.MouseEvent.CLICK, removeChildHandler);
