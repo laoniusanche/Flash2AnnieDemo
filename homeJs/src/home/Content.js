@@ -30,6 +30,7 @@ home.Content = function () {
         this.y = this.stage.viewRect.y + 100;
     }.bind(this));
     this.addEventListener(annie.MouseEvent.CLICK, function (e) {
+        if(!e.target.scene)return;
         if (e.target.scene == "") {
             alert(e.target.title_txt.text + "还在开发中,敬请期待!");
         }else{
