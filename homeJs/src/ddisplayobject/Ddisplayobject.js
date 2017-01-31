@@ -48,8 +48,8 @@ ddisplayobject.Ddisplayobject=function(){
     }
 
     function getWHHandler(e) {
-        var h = s.logo_mc.getWH().height,
-            w = s.logo_mc.getWH().width;
+        var h = s.logo_mc.height,
+            w = s.logo_mc.width;
         s.output_txt.text = 'logo_WH:  width:' + w + ',height:' + h + '';
     }
 

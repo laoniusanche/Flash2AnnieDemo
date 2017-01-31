@@ -37,13 +37,13 @@ dInputText.DInputText = function () {
     }
 
     function changeTextHandler(e) {
-        var inputTxtVal = s.input_text.getText();
+        var inputTxtVal = s.input_text.text;
         if (inputTxtVal.replace(/(^\s*)|(\s*$)/g, "") === '') {
             alert('请先输入转换文本!');
             return;
         }
         s.output_txt.text = inputTxtVal;
-        s.input_text.setText('');
+        s.input_text.text='';
     }
 };
 F2xExtend(dInputText.DInputText, F2xContainer);

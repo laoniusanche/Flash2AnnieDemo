@@ -14,12 +14,10 @@ dsound.Dsound = function () {
         s.removeEventListener(annie.Event.ADD_TO_STAGE, initStage);
         s.back_btn.addEventListener(annie.MouseEvent.CLICK, backHomeHandler);
         s.tip_mc.addEventListener('onMouseDown', hideTipLayerHandler);
-
         s.play_btn.addEventListener('onMouseDown', playSoundHandler);
         s.pause_btn.addEventListener('onMouseDown', pauseSoundHandler);
         s.stop_btn.addEventListener('onMouseDown', stopSoundHandler);
     }
-
     /**
      * 返回范例列表
      * @param e
@@ -57,9 +55,9 @@ dsound.Dsound = function () {
      */
     function pauseSoundHandler(e) {
         if (soundPlayer) {
-            soundPlayer.pause();
+            soundPlayer.pause(!soundPlayer.media.paused);
         }
-        s.output_txt.text = '暂停音乐...';
+        s.output_txt.text = '暂停或者恢复播放音乐...';
     }
 
     /**

@@ -45,7 +45,7 @@ dresmanager.Dresmanager=function(){
      * @param e
      */
     function ajaxHandler(e) {
-        annie.RESManager.ajax({
+        Flash2x.ajax({
             url         : 'resource/dresmanager/dresmanager.res.json',
             type        : 'get',
             data        : {},

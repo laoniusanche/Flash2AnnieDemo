@@ -43,7 +43,7 @@ dfacephoto.Dfacephoto=function(){
     function circleFacelHandler(e) {
         trace(e.type);
         var facePhoto = new annieUI.FacePhoto();
-        facePhoto.init('../demofacephoto/resource/Flash2xLogo.jpg',200,0);
+        facePhoto.init('resource/Flash2xLogo.jpg',200,0);
         facePhoto.x=100;
         facePhoto.y=460;
         s.addChild(facePhoto);
@@ -56,7 +56,7 @@ dfacephoto.Dfacephoto=function(){
     function rectFaceHandler(e) {
         trace(e.type);
         var facePhoto = new annieUI.FacePhoto();
-        facePhoto.init('../demofacephoto/resource/Flash2xLogo.jpg',200,1);
+        facePhoto.init('resource/Flash2xLogo.jpg',200,1);
         facePhoto.x=200;
         facePhoto.y=200;
         s.addChild(facePhoto);

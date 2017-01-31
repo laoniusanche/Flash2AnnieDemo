@@ -45,7 +45,7 @@ dshape.Dshape = function () {
      */
     function arcHandler(e) {
         shareManager.beginStroke('#000', 1, 1);
-        shareManager.arc(200, 500, 40, 0, 120);
+        shareManager.drawArc(200, 500, 40, 0, 120);
         shareManager.endStroke();
         s.addChild(shareManager);
         s.output_txt.text = '弧线';
@@ -57,7 +57,7 @@ dshape.Dshape = function () {
      */
     function circleHandler(e) {
         shareManager.beginFill('#000');
-        shareManager.circle(360, 500, 40);
+        shareManager.drawCircle(360, 500, 40);
         shareManager.endFill();
         s.addChild(shareManager);
         s.output_txt.text = '圆形';
