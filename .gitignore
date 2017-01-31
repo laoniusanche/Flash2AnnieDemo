@@ -23,5 +23,4 @@ bin-release/
 .DS_Store
 .gitignore
 .idea
-homeJs/released
 homeJs/tools
