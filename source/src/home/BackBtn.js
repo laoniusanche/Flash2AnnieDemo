@@ -8,7 +8,7 @@ F2xExtend(home.BackBtn,F2xContainer);
 home.BackBtn.prototype.initUI=function(){
 	var s = this;
 	//f2x_auto_created_init_start
-	var _d0=Flash2x.b("home","F2xAuto_4");
+	var _d0=Flash2x.b("home","F2xAuto_5");
 	Flash2x.d(_d0,{y:10});
 	s.addChild(_d0);
 	//f2x_auto_created_init_end

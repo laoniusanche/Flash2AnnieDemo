@@ -59,6 +59,7 @@
 				<file name="src/home/homeAuto.js"/>
 				<file name="src/home/Home.js"/>
 				<file name="src/home/ItemButton.js"/>
+				<file name="src/home/DownBtn.js"/>
 				<file name="src/home/BackBtn.js"/>
 				<file name="src/home/TitleMc.js"/>
 			</sources>

@@ -6,7 +6,7 @@ home.Home=function(){
 	s.addEventListener(annie.Event.ADD_TO_STAGE, function (e) {
 		s.title_mc.y = s.stage.viewRect.y;
 	});
-	s.title_mc.mouseChildren=false;
+	// s.title_mc.mouseChildren=false;
     s.classList = [];
     s.classList.push({name: "annie.URLLoader", scene: "urlLoader",classObj:"urlLoader.UrlLoader",title:"加载示例"});
     s.classList.push({name: "annie.Shape", scene: "shapeColor",classObj:"shapeColor.ShapeColor",title:"矢量示例"});
@@ -39,7 +39,7 @@ F2xExtend(home.Home,F2xContainer);
 home.Home.prototype.initUI=function(){
 	var s = this;
 	//f2x_auto_created_init_start
-	var _d0=new home.F2xAuto_3();
+	var _d0=new home.F2xAuto_4();
 	_d0.name="title_mc";
 	s.title_mc=_d0;
 	s.addChild(_d0);
