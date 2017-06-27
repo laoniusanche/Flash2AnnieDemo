@@ -20,3 +20,8 @@ bin-release/
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
 
+.DS_Store
+.gitignore
+.idea/workspace.xml
+source/.DS_Store
+source/src/.DS_Store
