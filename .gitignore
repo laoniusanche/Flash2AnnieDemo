@@ -25,3 +25,4 @@ bin-release/
 .idea/workspace.xml
 source/.DS_Store
 source/src/.DS_Store
+source/released/
