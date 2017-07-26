@@ -31,7 +31,8 @@ shape.F2xAuto_3=function(){
 F2xExtend(shape.F2xAuto_3,F2xContainer);
 shape.F2xAuto_3.prototype.initUI=function(){
 	var s = this;
-	var _d0=Flash2x.b("shape","F2xAuto_8");
+	var _d0=Flash2x.b("shape","F2xAuto_14");
+	Flash2x.d(_d0,{y:5.6});
 	s.addChild(_d0);
 };
 shape.F2xAuto_5=function(){
@@ -42,7 +43,7 @@ shape.F2xAuto_5=function(){
 F2xExtend(shape.F2xAuto_5,F2xContainer);
 shape.F2xAuto_5.prototype.initUI=function(){
 	var s = this;
-	var _d0=Flash2x.b("shape","F2xAuto_10");
+	var _d0=Flash2x.b("shape","F2xAuto_11");
 	Flash2x.d(_d0,{b:1.1});
 	s.addChild(_d0);
 };
@@ -54,7 +55,7 @@ shape.F2xAuto_6=function(){
 F2xExtend(shape.F2xAuto_6,F2xContainer);
 shape.F2xAuto_6.prototype.initUI=function(){
 	var s = this;
-	var _d0=Flash2x.b("shape","F2xAuto_11");
+	var _d0=Flash2x.b("shape","F2xAuto_12");
 	Flash2x.d(_d0,{a:0.989});
 	s.addChild(_d0);
 };
@@ -66,7 +67,7 @@ shape.F2xAuto_4=function(){
 F2xExtend(shape.F2xAuto_4,F2xContainer);
 shape.F2xAuto_4.prototype.initUI=function(){
 	var s = this;
-	var _d0=Flash2x.b("shape","F2xAuto_9");
+	var _d0=Flash2x.b("shape","F2xAuto_10");
 	Flash2x.d(_d0,{a:0.9677,b:0.9167});
 	s.addChild(_d0);
 };

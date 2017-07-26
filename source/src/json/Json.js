@@ -3,7 +3,7 @@ json.Json = function () {
     var s = this;
     F2xContainer.call(s);
     s.initUI();
-    Flash2x.jsonp('testData.js', 1, 'jsonHandler', function (result) {
+    Flash2x.jsonp('libs/testData.js', 1, 'jsonHandler', function (result) {
         s.message = result;
     });
     var nowtext = null;
