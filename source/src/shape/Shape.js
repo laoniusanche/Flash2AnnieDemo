@@ -112,28 +112,28 @@ shape.Shape.prototype.colorChange = function (colorCount) {
 shape.Shape.prototype.initUI = function () {
     var s = this;
     //f2x_auto_created_init_start
-    var _d0 = new shape.F2xAuto_4();
-    _d0.name = "triangle_btn";
-    s.triangle_btn = _d0;
-    Flash2x.d(_d0, {x: 69.8, y: 184.2});
-    var _d1 = new shape.F2xAuto_6();
-    _d1.name = "Rounded_btn";
-    s.Rounded_btn = _d1;
-    Flash2x.d(_d1, {x: 66.95, y: 290.7});
-    var _d2 = new shape.F2xAuto_5();
-    _d2.name = "rectangle_btn";
-    s.rectangle_btn = _d2;
-    Flash2x.d(_d2, {x: 68.95, y: 237.7});
-    var _d3 = new shape.F2xAuto_3();
-    _d3.name = "circular_btn";
-    s.circular_btn = _d3;
-    Flash2x.d(_d3, {x: 69.75, y: 133.8});
-    var _d4 = new shape.F2xAuto_1();
-    s.addChild(_d4);
-    s.addChild(_d3);
-    s.addChild(_d2);
-    s.addChild(_d1);
-    s.addChild(_d0);
-    //f2x_auto_created_init_end
+	var _d0=new shape.F2xAuto_4();
+	_d0.name="triangle_btn";
+	s.triangle_btn=_d0;
+	Flash2x.d(_d0,{x:69.8,y:184.2});
+	var _d1=new shape.F2xAuto_6();
+	_d1.name="Rounded_btn";
+	s.Rounded_btn=_d1;
+	Flash2x.d(_d1,{x:66.95,y:290.7});
+	var _d2=new shape.F2xAuto_5();
+	_d2.name="rectangle_btn";
+	s.rectangle_btn=_d2;
+	Flash2x.d(_d2,{x:68.95,y:237.7});
+	var _d3=new shape.F2xAuto_3();
+	_d3.name="circular_btn";
+	s.circular_btn=_d3;
+	Flash2x.d(_d3,{x:69.75,y:133.8});
+	var _d4=new shape.F2xAuto_1();
+	s.addChild(_d4);
+	s.addChild(_d3);
+	s.addChild(_d2);
+	s.addChild(_d1);
+	s.addChild(_d0);
+	//f2x_auto_created_init_end
 
 };
