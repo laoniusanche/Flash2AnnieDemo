@@ -34,8 +34,8 @@ F2xExtend(scratchCard.ScratchCard, F2xContainer);
 scratchCard.ScratchCard.prototype.initUI = function () {
     var s = this;
     //f2x_auto_created_init_start
-	var _d0=Flash2x.t(0,decodeURI("%E5%88%86%E5%88%AB%E5%9C%A8%E4%B8%A4%E4%B8%AA%E6%96%B9%E5%9D%97%E4%B8%8A%E6%BB%91%E5%8A%A8%E7%9C%8B%E6%95%88%E6%9E%9C"),24,"#333333","Heiti SC",2,2,394.9,24,26,"center",false,false,"multiline",false);
-	Flash2x.d(_d0,{x:120.5,y:943});
+	var _d0=Flash2x.t(0,decodeURI("%E5%88%86%E5%88%AB%E5%9C%A8%E4%B8%A4%E4%B8%AA%E6%96%B9%E5%9D%97%E4%B8%8A%E6%BB%91%E5%8A%A8%E7%9C%8B%E6%95%88%E6%9E%9C"),24,"#333333","Arial",2,2,394.9,26.85,26,"center",false,false,"multiline",false);
+	Flash2x.d(_d0,{x:120.6,y:943});
 	s.addChild(_d0);
 	//f2x_auto_created_init_end
 };

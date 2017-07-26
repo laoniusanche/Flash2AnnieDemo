@@ -59,7 +59,7 @@ movieClip.monkey_leg_lower_right=function(){
 F2xExtend(movieClip.monkey_leg_lower_right,F2xContainer);
 movieClip.monkey_leg_lower_right.prototype.initUI=function(){
 	var s = this;
-	var _d1=Flash2x.s({type:0,data:"AALjNQhZEFgbCWAANDOQAQieBNjV"},null,{type:0,color:"#000000",lineWidth:2,caps:"round",joints:"round",miter:"10"});
+	var _d1=Flash2x.s({type:0,data:"AANDOQAQieBNjVAALjNQhZEFgbCW"},null,{type:0,color:"#000000",lineWidth:2,caps:"round",joints:"round",miter:"10"});
 	Flash2x.d(_d1,{x:-2.075,y:7.4});
 	var _d0=Flash2x.s({type:0,data:"AhpDAQAbiWBZkEQA/gOAgA2QhNDVgQCdQghAegeAAQgeAAgZgeg"},{type:0,color:"#8B4B0E"},null);
 	Flash2x.d(_d0,{x:-2.075,y:8.7215});

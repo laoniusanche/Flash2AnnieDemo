@@ -70,7 +70,7 @@ movieClip.MovieClip.prototype.initUI=function(){
 	var _d0=new movieClip.F2xAuto_4();
 	_d0.name="check3_mc";
 	s.check3_mc=_d0;
-	Flash2x.d(_d0,{x:485.9,y:849.2});
+	Flash2x.d(_d0,{x:485.9,y:849.3});
 	var _d1=new movieClip.F2xAuto_4();
 	_d1.name="check2_mc";
 	s.check2_mc=_d1;
@@ -93,7 +93,7 @@ movieClip.MovieClip.prototype.initUI=function(){
 	_d7.name="play_btn";
 	s.play_btn=_d7;
 	Flash2x.d(_d7,{x:191.1,y:642.6});
-	var _d8=Flash2x.t(0,decodeURI("%E4%B8%80%E5%8F%AA%E7%8C%B4%E5%AD%90"),36,"#000000","Times New Roman",2,2,144.2,50.4,38,"left",false,false,"multiline",false);
+	var _d8=Flash2x.t(0,decodeURI("%E4%B8%80%E5%8F%AA%E7%8C%B4%E5%AD%90"),36,"#000000","Times New Roman",2,2,144.2,39.9,38,"left",false,false,"multiline",false);
 	Flash2x.d(_d8,{x:245.9,y:135});
 	var _d9=Flash2x.t(0,decodeURI(""),36,"#000000","Times New Roman",2,2,582.95,39.9,38,"center",false,false,"single",false);
 	_d9.name="tip_txt";

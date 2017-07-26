@@ -38,8 +38,8 @@ F2xExtend(flipBook.FlipBook,F2xContainer);
 flipBook.FlipBook.prototype.initUI=function(){
 	var s = this;
 	//f2x_auto_created_init_start
-	var _d0=Flash2x.t(0,decodeURI("%E7%94%B5%E5%AD%90%E6%9D%82%E5%BF%97%E7%BB%84%E4%BB%B6%E9%A1%B5%E6%95%B0%E5%BF%85%E9%A1%BB%E4%B8%BA%E5%81%B6%E6%95%B0"),24,"#333333","Heiti SC",2,2,394.9,24,26,"center",false,false,"multiline",false);
-	Flash2x.d(_d0,{x:120.5,y:943});
+	var _d0=Flash2x.t(0,decodeURI("%E7%94%B5%E5%AD%90%E6%9D%82%E5%BF%97%E7%BB%84%E4%BB%B6%E9%A1%B5%E6%95%B0%E5%BF%85%E9%A1%BB%E4%B8%BA%E5%81%B6%E6%95%B0"),24,"#333333","Arial",2,2,394.9,26.85,26,"center",false,false,"multiline",false);
+	Flash2x.d(_d0,{x:120.6,y:943});
 	s.addChild(_d0);
 	//f2x_auto_created_init_end
 };
