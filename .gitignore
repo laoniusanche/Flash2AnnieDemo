@@ -26,3 +26,4 @@ bin-release/
 source/.DS_Store
 source/src/.DS_Store
 source/released/
+node_modules/

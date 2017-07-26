@@ -23,7 +23,7 @@ drawingBoard.DrawingBoard.prototype.initUI=function(){
 	_d1.name="canel_btn";
 	s.canel_btn=_d1;
 	Flash2x.d(_d1,{x:220,y:880.95});
-	var _d0=Flash2x.t(0,decodeURI("%E7%94%BB%E6%9D%BF%E7%BB%84%E4%BB%B6%EF%BC%8C%E6%94%AF%E6%8C%81%E6%92%A4%E9%94%80%E5%9B%9E%E9%80%80"),24,"#333333","Heiti SC",2,2,520.4,24,26,"center",false,false,"multiline",false);
+	var _d0=Flash2x.t(0,decodeURI("%E7%94%BB%E6%9D%BF%E7%BB%84%E4%BB%B6%EF%BC%8C%E6%94%AF%E6%8C%81%E6%92%A4%E9%94%80%E5%9B%9E%E9%80%80"),24,"#333333","Arial",2,2,520.4,26.85,26,"center",false,false,"multiline",false);
 	Flash2x.d(_d0,{x:57.8,y:943});
 	s.addChild(_d0);
 	s.addChild(_d1);
