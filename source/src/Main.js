@@ -13,8 +13,11 @@ window.addEventListener("load",function(){
      * 渲染模式
      */
     var stage=new annie.Stage("annieEngine",640,1040,30,annie.StageScaleMode.FIXED_HEIGHT,0);
-    stage.autoResize=true;
-    stage.autoSteering=true;
+    if(annie.osType!="pc") {
+        stage.autoResize = true;
+        stage.autoSteering = true;
+        // annie.debug=true;
+    }
     stage.addEventListener(annie.Event.INIT_TO_STAGE,function () {
         Flash2x.loadScene(["loading","home"],function(per){
         // Flash2x.loadScene(["scratchCard","flipBook","scrollList","scrollPage","slidePage","facePhoto","drawingBoard"],function(per){

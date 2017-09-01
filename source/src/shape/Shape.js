@@ -9,7 +9,9 @@ shape.Shape = function () {
     s.colorList = ["#0563c3", "#acfff2", "#97daf3", "#d5e1ff", "#21aabe", "#e3c7ff", "#5ad4c1", "#f5eb88", "#aef588",
         "#6da467", "#cfebdd", "#77c7ff", "#fff1c0", "#ed8b8b", "#ffae92", "#f28f59", "#ffbc53", "#fe7761", "#f98585", "#aa90e5",
         "#b4d7aa", "#9cdebb", "#ff76aa", "#fff39f", "#92e6e9", "#fae5b3", "#a2d5f8", "#ffd0de", "#d1bffe", "#ff9ed9", "#e6f5ff", "#97cafe", "#fffcc0", "#ffe08b", "#c1ece2", "#fbb4c5"]
-    s.colorProportionList = ["#00FF00","#000000"];
+    //渐变颜色的数组
+    s.colorProportionList = ["#00FF00", "#000000"];
+    //渐变颜色的范围
     s.proportionList = [1, 0];
     s.triangle_btn.mouseChildren = false;
     s.circular_btn.mouseChildren = false;
@@ -41,7 +43,7 @@ shape.Shape = function () {
                  **点击画圆形，程序画图
                  */
                 // s.pointList=[200,600,400,600];
-                s.pointList=[0,0,0,0,0,100];
+                s.pointList = [0, 0, 0, 0, 0, 100];
                 if (colorCount <= 36) {
                     s.colorChange(colorCount);
                     s.shapeDraw.drawCircle(315, 600, 100);

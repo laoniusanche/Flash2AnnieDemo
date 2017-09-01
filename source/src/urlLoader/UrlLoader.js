@@ -40,27 +40,27 @@ urlLoader.UrlLoader=function(){
         switch(e.target.name){
             case "jsBtn":
                 loader.responseType="js";
-                loader.load("resource/urlLoader/test.js");
+                loader.load("resource/testResource/test.js");
                 break;
             case "jsonBtn":
                 loader.responseType="json";
-                loader.load("resource/urlLoader/test.json");
+                loader.load("resource/testResource/test.json");
                 break;
             case "cssBtn":
                 loader.responseType="css";
-                loader.load("resource/urlLoader/test.css");
+                loader.load("resource/testResource/test.css");
                 break;
             case "xmlBtn":
                 loader.responseType="text";
-                loader.load("resource/urlLoader/test.xml");
+                loader.load("resource/testResource/test.xml");
                 break;
             case "textBtn":
                 loader.responseType="text";
-                loader.load("resource/urlLoader/test.txt");
+                loader.load("resource/testResource/test.txt");
                 break;
             case "imageBtn":
                 loader.responseType="image";
-                loader.load("resource/urlLoader/test.png");
+                loader.load("resource/testResource/test.png");
                 break;
         }
     });
