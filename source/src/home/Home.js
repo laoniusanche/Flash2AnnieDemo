@@ -8,6 +8,7 @@ home.Home = function () {
     });
     // s.title_mc.mouseChildren=false;
     s.classList = [];
+    s.classList.push({name:"StartDrag",scene:"drag",classObj:"drag.Drag",title:"startDrag拖动示例"});
     s.classList.push({name: "annie.URLLoader", scene: "urlLoader", classObj: "urlLoader.UrlLoader", title: "加载示例"});
     s.classList.push({name: "annie.Shape", scene: "shapeColor", classObj: "shapeColor.ShapeColor", title: "矢量示例"});
     s.classList.push({name: "annie.Input", scene: "input", classObj: "input.Input", title: "输入文本示例"});
@@ -19,6 +20,7 @@ home.Home = function () {
     s.classList.push({name: "annie.Shape", scene: "shape", classObj: "shape.Shape", title: "矢量颜色渐变"});
     s.classList.push({name: "annie.Tween", scene: "tween", classObj: "tween.Tween", title: "缓动类型示例"});
     s.classList.push({name: "annie.MouseEvent", scene: "mouseEvent",classObj: "mouseEvent.MouseEvent",title: "鼠标事件示例"});
+    s.classList.push({name:"annie.ColorFilter",scene:"colorFilter",classObj:"colorFilter.ColorFilter",title:"滤镜效果示例"});
     s.classList.push({name: "annieUI.FacePhoto", scene: "facePhoto", classObj: "facePhoto.FacePhoto", title: "加载头像示例"});
     s.classList.push({name: "annieUI.FlipBook", scene: "flipBook", classObj: "flipBook.FlipBook", title: "电子杂志示例"});
     s.classList.push({name: "annieUI.DrawingBoard", scene: "drawingBoard", classObj: "drawingBoard.DrawingBoard", title: "画板示例"});
@@ -45,10 +47,10 @@ F2xExtend(home.Home, F2xContainer);
 home.Home.prototype.initUI = function () {
     var s = this;
     //f2x_auto_created_init_start
-    var _d0 = new home.F2xAuto_4();
-    _d0.name = "title_mc";
-    s.title_mc = _d0;
-    s.addChild(_d0);
-    //f2x_auto_created_init_end
+	var _d0=new home.F2xAuto_4();
+	_d0.name="title_mc";
+	s.title_mc=_d0;
+	s.addChild(_d0);
+	//f2x_auto_created_init_end
 
 };

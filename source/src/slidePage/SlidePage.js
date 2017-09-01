@@ -22,7 +22,8 @@ slidePage.SlidePage=function(){
         sp.canSlidePrev=true;
         trace("stop");
     });
-    sp.addPageList([slidePage.Page1,slidePage.Page2,slidePage.Page3,slidePage.Page4,slidePage.Page5]);
+    var arr=[slidePage.Page1,slidePage.Page2,slidePage.Page3,slidePage.Page4,slidePage.Page5]
+    sp.addPageList(arr);
     s.addChildAt(sp,0);
     s.addChildAt(arrow,1);
 };
