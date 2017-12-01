@@ -5,6 +5,7 @@ scrollPage.ScrollPage=function(){
 	s.initUI();
 	var sp=new annieUI.ScrollPage(640,1040);
 	var pageList=[scrollPage.Page1,scrollPage.Page2,scrollPage.Page3,scrollPage.Page4,scrollPage.Page5];
+    // sp.isVertical=false;
 	for(var i=0;i<5;i++){
 		var p=new pageList[i];
 		p.y=i*1040;

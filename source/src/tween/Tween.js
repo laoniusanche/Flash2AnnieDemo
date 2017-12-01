@@ -120,7 +120,7 @@ tween.Tween.prototype.start = function () {
         //单向循环
     }
     if (s.UsebackInOut.currentFrame == 2) {
-        tweenData.ease = annie.Tween.backInOut;
+        tweenData.ease = annie.Tween.backInOut();
         //使用backInOut缓动类型
     }
     if (s.Rotate.currentFrame == 2) {
