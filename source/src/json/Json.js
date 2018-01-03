@@ -6,101 +6,105 @@ json.Json = function () {
     Flash2x.jsonp('libs/testData.js', 1, 'jsonHandler', function (result) {
         s.message = result;
     });
-    var nowtext = null;
+    for(var i=1;i<=4;i++){
+        s["switch"+i].mouseChildren=false;
+    }
     //点击事件后，判断按钮当前帧数，再判断select选择框当前选择的文本信息
-    s.switch1.addEventListener(annie.MouseEvent.CLICK, function (e) {
-        if (s.switch1.currentFrame == 1) {
-            s.switch1.gotoAndStop(2);
-            if (nowtext == 2) {
-                s.name.text = s.message.name2;
+    s.addEventListener(annie.MouseEvent.CLICK,function (e) {
+        if(e.target.name=="switch1"){
+            if (s.switch1.currentFrame == 1) {
+                s.switch1.gotoAndStop(2);
+                if (s.nowtext == 2) {
+                    s.name.text = s.message.name2;
+                } else {
+                    s.name.text = s.message.name1;
+                }
             } else {
-                s.name.text = s.message.name1;
+                s.switch1.gotoAndStop(1);
+                s.name.text = "";
             }
-        } else {
-            s.switch1.gotoAndStop(1);
-            s.name.text = "";
-        }
-    });
-    s.switch2.addEventListener(annie.MouseEvent.CLICK, function (e) {
-        if (s.switch2.currentFrame == 1) {
-            s.switch2.gotoAndStop(2);
-            if (nowtext == 2) {
-                s.phone.text = s.message.phone2;
+        }else if(e.target.name=="switch2"){
+            if (s.switch2.currentFrame == 1) {
+                s.switch2.gotoAndStop(2);
+                if (s.nowtext == 2) {
+                    s.phone.text = s.message.phone2;
+                } else {
+                    s.phone.text = s.message.phone1;
+                }
             } else {
-                s.phone.text = s.message.phone1;
+                s.switch2.gotoAndStop(1);
+                s.phone.text = "";
             }
-        } else {
-            s.switch2.gotoAndStop(1);
-            s.phone.text = "";
-        }
-    });
-    s.switch3.addEventListener(annie.MouseEvent.CLICK, function (e) {
-        if (s.switch3.currentFrame == 1) {
-            s.switch3.gotoAndStop(2);
-            if (nowtext == 2) {
-                s.hobby.text = s.message.hobby2;
+        }else if(e.target.name=="switch3"){
+            if (s.switch3.currentFrame == 1) {
+                s.switch3.gotoAndStop(2);
+                if (s.nowtext == 2) {
+                    s.hobby.text = s.message.hobby2;
+                } else {
+                    s.hobby.text = s.message.hobby1;
+                }
             } else {
-                s.hobby.text = s.message.hobby1;
+                s.switch3.gotoAndStop(1);
+                s.hobby.text = "";
             }
-        } else {
-            s.switch3.gotoAndStop(1);
-            s.hobby.text = "";
-        }
-    });
-    s.switch4.addEventListener(annie.MouseEvent.CLICK, function (e) {
-        if (s.switch4.currentFrame == 1) {
-            s.news.state.gotoAndStop(2);
-            var imgEle = new Image();
-            imgEle.onload = function (e) {
-                var bitmap = new annie.Bitmap(imgEle);
-                var w = e.target.width;
-                var h = e.target.height;
-                var radio = 250 / w;
-                // console.log(radio)
-                bitmap.scaleY = bitmap.scaleX = radio;
-                // bitmap.y= -(h*radio-250)/2+10;
-                s.news.addChild(bitmap);
-            };
-            if (nowtext == 2) {
-                imgEle.src = s.message.photo2;
+        }else if(e.target.name=="switch4"){
+            if (s.switch4.currentFrame == 1) {
+                s.news.state.gotoAndStop(2);
+                var imgEle = new Image();
+                imgEle.onload = function (e) {
+                    var bitmap = new annie.Bitmap(imgEle);
+                    var w = e.target.width;
+                    var h = e.target.height;
+                    var radio = 250 / w;
+                    // console.log(radio)
+                    bitmap.scaleY = bitmap.scaleX = radio;
+                    // bitmap.y= -(h*radio-250)/2+10;
+                    s.news.addChild(bitmap);
+                };
+                if (s.nowtext == 2) {
+                    imgEle.src = s.message.photo2;
+                } else {
+                    imgEle.src = s.message.photo1;
+                }
+                s.switch4.gotoAndStop(2);
             } else {
-                imgEle.src = s.message.photo1;
+                s.switch4.gotoAndStop(1);
+                s.news.state.gotoAndStop(1);
+                s.news.removeChildAt(1);
             }
-            s.switch4.gotoAndStop(2);
-        } else {
-            s.switch4.gotoAndStop(1);
-            s.news.state.gotoAndStop(1);
-            s.news.removeChildAt(1);
         }
-    });
+    })
     var float = new annie.FloatDisplay();
-    var select = document.getElementById("city");
-    select.style.width = "180px";
-    select.style.height = "40px";
-    select.style.fontSize = "20px";
-    float.init(select);
+    s.select = document.getElementById("city");
+    s.select.style.width = "180px";
+    s.select.style.height = "40px";
+    s.select.style.fontSize = "20px";
+    float.init(s.select);
     float.x = 200;
     float.y = 200;
     s.addChild(float);
-    //将html  select选择框添加到舞台
-    select.onchange = function (e) {
-        var index = select.selectedIndex;
-        nowtext = select.options[index].text;
-        if (s.switch4.currentFrame == 2) {
-            s.news.removeChildAt(1);
-        }
-        s.switch1.gotoAndStop(1);
-        s.name.text = "";
-        s.switch2.gotoAndStop(1);
-        s.phone.text = "";
-        s.switch3.gotoAndStop(1);
-        s.hobby.text = "";
-        s.switch4.gotoAndStop(1);
-        s.news.state.gotoAndStop(1);
-    }
-    //select选择框发生改变时，获取选择的index，按钮初始化，内容清空
+    //将html  s.select选择框添加到舞台
+    s.select.onchange = s.change.bind(s);
+
 };
 F2xExtend(json.Json, F2xContainer);
+//s.select选择框发生改变时，获取选择的index，按钮初始化，内容清空
+json.Json.prototype.change = function () {
+    var s=this;
+    var index = s.select.selectedIndex;
+    s.nowtext = s.select.options[index].text;
+    if (s.switch4.currentFrame == 2) {
+        s.news.removeChildAt(1);
+    }
+    s.switch1.gotoAndStop(1);
+    s.name.text = "";
+    s.switch2.gotoAndStop(1);
+    s.phone.text = "";
+    s.switch3.gotoAndStop(1);
+    s.hobby.text = "";
+    s.switch4.gotoAndStop(1);
+    s.news.state.gotoAndStop(1);
+}
 json.Json.prototype.initUI = function () {
     var s = this;
     //f2x_auto_created_init_start

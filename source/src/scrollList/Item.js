@@ -14,6 +14,7 @@ scrollList.Item.prototype.data=null;
 scrollList.Item.prototype.initData=function(id,data){
     var s=this;
     s.id=id;
+    console.log(s.id)
     s.data=data;
     if(data) {
         s.coin_txt.text = data.coin;

@@ -37,8 +37,8 @@ scrollList.ScrollList.prototype.getData=function () {
 	var s=this;
 	var dataList=[];
 	for(var i=0;i<30;i++){
-        dataList.push({nickName:"小可"+s.dataCount,coin:Math.random()*10000>>0,distance:Math.random()*20000>>0} );
-        s.dataCount++;
+        dataList.push({nickName:"小可",coin:Math.random()*10000>>0,distance:Math.random()*20000>>0} );
+        // s.dataCount++;
     }
 	return dataList;
 }

@@ -19,6 +19,7 @@ home.Home = function () {
     s.classList.push({name: "annie.Timer", scene: "dtimer", classObj: "dtimer.Dtimer", title: "定时器示例"});
     s.classList.push({name: "annie.Shape", scene: "shape", classObj: "shape.Shape", title: "矢量颜色渐变"});
     s.classList.push({name: "annie.Tween", scene: "tween", classObj: "tween.Tween", title: "缓动类型示例"});
+    s.classList.push({name:"annie.Bitmap",scene:"bitmap",classObj:"bitmap.Bitmap",title:"获取设备相片及相片处理展示示例"});
     s.classList.push({name: "annie.MouseEvent", scene: "mouseEvent",classObj: "mouseEvent.MouseEvent",title: "鼠标事件示例"});
     s.classList.push({name:"annie.ColorFilter",scene:"colorFilter",classObj:"colorFilter.ColorFilter",title:"滤镜效果示例"});
     s.classList.push({name: "annieUI.FacePhoto", scene: "facePhoto", classObj: "facePhoto.FacePhoto", title: "加载头像示例"});

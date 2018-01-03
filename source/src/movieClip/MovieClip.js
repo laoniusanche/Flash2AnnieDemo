@@ -10,7 +10,7 @@ movieClip.MovieClip=function(){
     s.check3_mc.mouseChildren=false;
     var setTip=function (msg) {
         s.tip_txt.text=msg;
-    }
+    };
     s.addEventListener(annie.MouseEvent.CLICK,function (e) {
         switch(e.target.name){
             case "play_btn":

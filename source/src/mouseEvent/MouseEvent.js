@@ -11,7 +11,23 @@ mouseEvent.MouseEvent = function () {
     });
     s.mouseEvent_btn.addEventListener(annie.MouseEvent.MOUSE_MOVE, function (e) {
         s.mouseMove_txt.text = "X:" + e.stageY + "Y:" + e.stageY;
-    })
+    });
+	/*
+	**  一个侦听解决所有点击事件
+	 */
+
+	/*第一步将你多需要的点击按钮，mouseChildren=false,阻止点击时一直向下冒泡，加快反应时间*/
+	s.mouseEvent_btn.mouseChildren=false;
+	/*有多少写多少*/
+	/*第一步结束*/
+
+	/*第二步*/
+	s.addEventListener(annie.MouseEvent.CLICK,function (e) {
+		if(e.target.name=="mouseEvent_btn"){
+			console.log(e.target.name)
+		}
+    });
+	/*如果有多个就用if语句去判断，e.target.name=需要点击元件的名称，这样多个点击事件一个侦听解决*/
 };
 F2xExtend(mouseEvent.MouseEvent, F2xContainer);
 mouseEvent.MouseEvent.prototype.initUI = function () {

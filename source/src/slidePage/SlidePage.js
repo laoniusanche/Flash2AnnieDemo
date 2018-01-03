@@ -5,7 +5,10 @@ slidePage.SlidePage=function(){
 	s.initUI();
 	var arrow=new slidePage.Arrow();
 	arrow.mouseEnable=false;
-    var sp=new annieUI.SlidePage(640,1040);
+	/*
+	***  false是横屏，true是竖屏
+	 */
+    var sp=new annieUI.SlidePage(640,1040,false);
     // sp.canSlideNext=false;
     // sp.canSlidePrev=false;
     sp.addEventListener(annie.Event.ON_SLIDE_START,function (e) {
@@ -22,7 +25,7 @@ slidePage.SlidePage=function(){
         sp.canSlidePrev=true;
         trace("stop");
     });
-    var arr=[slidePage.Page1,slidePage.Page2,slidePage.Page3,slidePage.Page4,slidePage.Page5]
+    var arr=[slidePage.Page1,slidePage.Page2,slidePage.Page3,slidePage.Page4,slidePage.Page5];
     sp.addPageList(arr);
     s.addChildAt(sp,0);
     s.addChildAt(arrow,1);
